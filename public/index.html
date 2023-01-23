@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+
+    <!---iconos-->
+    <script src="https://kit.fontawesome.com/c49b1019a3.js" crossorigin="anonymous"></script>
+    <!--tipografia-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="/public/index.html"><h2><i class="fas fa-clipboard"></i>Tus compras</h2></a>
+    </header>
+
+    <section id="pantallaInicial" class="pantallaInicial"> 
+        <div class="listadoNone">
+            <h1>No tenes nada en tu lista de compras.</h1>
+            <i class="far fa-frown-open"></i>
+        </div>
+
+        <span id="BtnInicio"><i class="fa-regular fa-square-plus">+</i></span> 
+        
+    </section>
+    
+    <section class="pantallaListado" id="listado">
+        <h2>Tu lista de cosas:</h2>
+            <ul class="contenedor" id="contenedor">
+            </ul>
+        
+            <span id="BtnListado"><i class="fa-regular fa-plus">+</i></span>
+    </section>
+
+    
+    <section id="pantallaDeSelección" class="pantallaDeSelección">
+        <div class="pantallaDeSelección-contenedor">
+            <form id="resetear" action="" class="form">
+                <div class="formulario1">
+                    <label for="">¿Qué necesitas?</label>
+                    <input type="text" id="input" value="" required  placeholder="Ingresá un producto">
+                </div>
+
+                <div class="formulario2">
+                    <label for="">Categorias</label>
+                        <select id="select" name="Elegí una categoría" required>
+                        <option value="0">Elegí una categoria</option>
+                        <option value="Images/comida.png">Comida</option>
+                        <option value="Images/libreria.png">Librería</option>
+                        <option value="Images/electronica.png">Electrónica</option>
+                        <option value="Images/bebida.png">Bebida</option>
+                        <option value="Images/regalo.png">Regalos</option>
+                        <option value="Images/ropa.png">Ropa</option>
+                        </select>
+                </div>
+
+                <div id="form" class="mensajeRequired"><h3></h3></div>
+
+                <div class="formulario3">
+                    <label for="">Notas opcionales</label>
+                    <textarea id="textarea" cols="12" rows="8" placeholder="Agrega una descripción" value=""></textarea>
+                </div>
+                
+                <div class="containerBtn">
+                    <button id="btnAgregar" class="">Agregar</button>
+                    <button id="verLista" class="">Anotados</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="pantallaDescripción" id="pantallaDescripción">
+        <ul class="tarjetaDescripción" id="contenedorDesc">
+
+        </ul>
+        
+    </section>
+    <script src="jscript/script.js"></script>
+</body>
+</html>

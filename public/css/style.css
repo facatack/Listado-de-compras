@@ -1,0 +1,448 @@
+body{
+    font-family: 'Caveat', cursive;
+    margin: 0;
+    box-sizing: border-box;
+    color: #cfd8dc;
+    background: linear-gradient(#bbdefb,#cfd8dc,#fafafa);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height:80px;
+    background: #2196f3;
+}
+
+/*titulo de la pagina en el header*/
+a{
+    text-decoration: none;
+}
+
+h2{
+    margin-left:20px;
+    font-size: 28px;
+    color: #f5f5f5;
+}
+
+/*acá esta la pantalla inicial con los parametros de flex para la pantalla que se va a mostrar*/
+.pantallaInicial{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 50px);
+}
+
+/*esta es la pantalla que se muestra cuando no se han agragado compras*/
+.listadoNone{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #f5f5f5;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    
+}
+
+.fa-frown-open{
+    font-size: 75px;
+}
+
+/*acá esta el contenedor con el que voy a posicionar el boton a la derecha, acá le doy las dimensiones que va a tener el contenedor y le doy flex para poder posicionar el boton.*/
+.boton{
+    width:100%;
+    max-height: 250px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 10vh;
+}
+
+
+
+/*acá creo la posicion del boton y su contenedor que lo delimita*/
+/*creo el boton*/
+
+i{
+    text-align: center;
+    font-style: normal;
+    margin-bottom: 9px;
+    margin-right: 5px;
+}
+span {
+    font-size: 30px;
+    text-align: center;
+    background: #2196f3;
+    border-radius: 50%;
+    box-shadow: #546e7a 5px 5px 9px; 
+    width: 40px;
+    height: 40px;
+    bottom: 35px;
+    right: 60px;
+    position: absolute;
+    z-index: 50;
+    transition: 0.4s;
+}
+
+span:hover{
+box-shadow:#455a64 1px 1px 2px;  
+background: #448aff;
+cursor: pointer;
+}
+
+
+
+
+/*ACA COMIENZO A TRABAJAR EL SECCION QUE APARECERA PARA PODER CARGAR LOS INPUT*/
+/*pongo la pantalla inicial en display none para trabajar otras nada mas*/
+
+/*trabajo loq ue va a seguir siendo el fondo natural de la app mientras aparece el bloque de seleccionar cosas (una nueva pantalla con inputs) le pongo flex para ubicar el card que voy hacer aparecer*/
+.pantallaDeSelección{
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    
+}
+
+
+/* acá tengo mi pantalla, a esta le doy display flex para ubicar ordenadamente los input en ella*/
+.pantallaDeSelección-contenedor{
+    height: 85vh;
+    width: 300px;
+    background: rgba(33,150,243,0.3);
+    border-radius: 8px;
+    box-shadow: #fafafa 0px 0px 95px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-direction: column;
+
+}
+
+/*Acá trabajo el contenedor de los contenedores de los formularios, trabajo su separación y le doy display flex para acomodar exactos los imputs.*/
+.form{ 
+    max-width: 450px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 25px;
+}
+
+/*acá trabajo los contenedores del titulo y los input*/
+/*formulario1*/
+.formulario1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+}
+
+.formulario1 label{
+    font-size: 28px;
+    color: #455a64;
+    margin-bottom: 2px;
+}
+
+.formulario1 input{
+    background-color: #f5f5f5;
+    border: none;
+    margin-bottom: 15px;
+    border-radius:10px;
+    outline: none;
+    width: 80%;
+    height: 23px;
+}
+
+/*formulario2*/
+.formulario2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+}
+
+
+.formulario2 label{
+    font-size: 28px;
+    color: #455a64;
+    margin-bottom: 2px;
+}
+
+.formulario2 select{
+    background-color: #f5f5f5;
+    border: none;
+    margin-bottom: 15px;
+    border-radius:10px;
+    outline: none;
+    width: 80%;
+    height: 23px;
+}
+
+
+
+/*formulario3*/
+.formulario3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+}
+
+.formulario3 label{
+    font-size: 28px;
+    color: #455a64;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.formulario3 textarea{
+    border: none;
+    margin-bottom: 10px;
+    border-radius:25px;
+    outline: none;
+    background-color: #f5f5f5;
+    width: 80%;
+    padding: 15px;
+    resize: none;
+}
+
+.mensajeRequired{
+    color: #263238;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+/*trabajo el div del boton para ubicación*/
+.containerBtn{
+    width: 80%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 70px;
+}
+
+input::placeholder{
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+}
+
+input:focus{
+    background: #eeeeee;
+}
+
+select:focus{
+    background: #eeeeee;
+
+}
+
+/*trabajo el boton*/
+.containerBtn button{
+    margin-top: 27px;
+    margin-left: 25px;
+    padding:10px;
+    background: #2196f3;
+    border-radius: 7px;
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 13px;
+    box-shadow: #546e7a 5px 5px 7px; 
+    transition: all 0.3s;
+    border: none;
+}
+    
+#verLista{
+        display: none;
+    }
+
+.containerBtn button:hover{
+    box-shadow:#546e7a 3px 3px 2px;
+    background:#448aff;
+    cursor: pointer;
+
+}
+
+.pantallaListado{
+    height: 92vh;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;    
+}
+
+
+
+/*trabajo el card que se va a ir agregando*/
+
+.contenedor{
+    width:100%;
+    height: 75vh;
+    overflow: auto;
+}
+
+
+ul{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    flex-direction: column;
+    padding: 0px;
+    height: 60vh;
+}
+
+.newProducto {
+    width: 354px;
+    min-height: 20%;
+    background: #bac8e3;
+    list-style: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-bottom: 5px;
+    padding: 0px;
+}
+
+.newProducto-p{
+    display: none;
+}
+
+.newProducto-h4 {
+    font-size: 28px;
+    color: #263238;
+    text-transform: capitalize;
+}
+
+.newProducto-btn {
+    background: #e3f2fd;
+    border: solid 0px;
+    border-radius: 7px;
+    height: 25px;
+}
+
+.newProducto-btn:hover{
+    cursor: pointer;
+}
+
+.newProducto-img{
+    width: 77px;
+}
+
+.newProducto-img_tacho{
+    width: 20px;
+}
+
+.newProducto-img_tacho:hover{
+cursor: pointer;
+}
+/*hago pantalla descripcio*/
+.pantallaDescripción{
+    width: 100%;
+    height: 92vh;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.contenedorDesc{
+    width:100%;
+}
+
+.tarjetaDescripción {
+    max-width: 300px;
+    min-height: 150px;
+    background: #bac8e3;
+    list-style: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 5px;
+    margin-top: 75px;
+    
+}
+
+.li-descripcion{
+    width:285px;
+    min-height: 166px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:flex-start;
+    
+}
+
+.div-img-h2-descripcion{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content:flex-start;
+    width: 80%;
+
+}
+
+.h2-descripcion{
+    font-size: 28px;
+    color: #263238;
+    text-transform: capitalize;
+    text-decoration:underline;
+}
+
+.img-descripcion{
+    width: 55px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.p-descripcion{
+    font-size:30px;
+    color: #263238;
+    text-transform: lowercase;
+    margin-top: 0px;
+    margin-left: 15px;
+}
+
+.volverButton{
+    padding:10px;
+    background: #2196f3;
+    border-radius: 7px;
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 15px;
+    box-shadow: #546e7a 5px 5px 7px; 
+    transition: all 0.3s;
+    border: none;
+    width: 100px;
+    text-align: center;
+    bottom: 180px;
+    right: 149px;
+    position: absolute;
+    z-index: 50;
+}
+
+.volverButton:hover{
+    box-shadow:#546e7a 3px 3px 2px;
+    background:#448aff;
+    cursor: pointer;
+}
